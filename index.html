@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Agent | Isekai Wibu</title>
-    <link rel="stylesheet" href="./src/index.css">
+    <link rel="stylesheet" href="./src/css/index.css">
 </head>
 
 <body>
     <header>
         <navbar class="container">
            <div class="navbar">
-             <img class="logo" src="/RevoU./src/jpg/RevoU.png" alt=""/>
+             <img class="logo" src="./src/jpg/RevoU.png" alt=""/>
                 <div class="menu">
                 <a class="menu-item" href="#hero">Home</a>
                 <a class="menu-item" href="#package">Our Package</a>
@@ -40,30 +40,10 @@
                         <img class="about-img" src="https://img.freepik.com/free-vector/hand-drawn-travel-agency-landing-page-with-leaves_23-2149362127.jpg?size=626&ext=jpg&ga=GA1.1.658701395.1678022736&semt=sph">
                         <img class="about-img" src="https://img.freepik.com/free-photo/flat-lay-yellow-luggage-with-copy-space_23-2148786124.jpg?size=626&ext=jpg&ga=GA1.1.658701395.1678022736&semt=sph">
 
-                        <!--Next and Previous-->
+                        <!--Next and Previous button-->
                         <a class="nextprev" onclick="plusDivs(-1)"></a>
                         <a class="nextprev" onclick="plusDivs(1)"></a>
 
-                        <script>
-                            var slideIndex=1;
-                            showDivs(slideIndex);
-                            function plusDivs(n){
-                                showDivs((slideIndex+=n));
-                            }
-                            function showDivs(n){
-                                var i;
-                                var imgList = document.getElementsByClassName("about-img");     
-                                if (n > imgList.length) slideIndex = 1;
-                                else if (n<1) slideIndex=imgList.length;
-                                for (i = 0; i < imgList.length; i++){
-                                    imgList[i].style.display="none";
-                                }
-                                imgList[slideIndex - 1].style.display = "block";
-                            }
-                            setInterval(() => {
-                                plusDivs(1);
-                            }, 3000);
-                        </script>
                         <div class="about-content">
                             <div class="content-caption">
                                 <p><i>Liburan menjadi menyenangkan bersama Travel Agentku.</i></p>
@@ -119,19 +99,6 @@
                                 </select>
                                </div>
                                 <input type="submit" value="Send">
-
-                                <script>
-                                    function validateForm(){
-                                        var name = document.forms["message-form"]["name"].value;
-                                        var email = document.forms["message-form"]["email"].value;
-                                        var interest = document.forms["message-form"]["interest"].value;
-                                        if(name =="" || email =="" || interest == ""){
-                                            alert("Input tidak boleh kosong!");
-                                            return false
-                                        }
-                                    }
-                                </script>
-
                             </form>
                         </div>
                     </div>
@@ -196,6 +163,5 @@
         <p>2023</p>
     </footer>
 </body>
-    
-</body>
+<script src="./src/js/index.js"></script>
 </html>
