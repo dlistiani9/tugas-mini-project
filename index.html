@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agent | Isekai Wibu</title>
+    <link rel="stylesheet" href="/RevoU_Training/Tugas/index.css">
+</head>
+
+<body>
+    <header>
+        <navbar class="container">
+           <div class="navbar">
+             <img class="logo" src="/RevoU_Training/Tugas/RevoU.png" alt=""/>
+                <div class="menu">
+                <a class="menu-item" href="#hero">Home</a>
+                <a class="menu-item" href="#package">Our Package</a>
+                <a class="menu-item" href="#call-us">Call Us</a>
+                </div>
+           </div>
+        </navbar>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-title">
+                    <h1>Your Trusted Travel Agent's</h1>
+                    <h6>Your happiness is our hapiness</h6>
+                </div>
+            </div>
+        </section>
+        <section id="about-contact">
+            <div class="container">
+                <div class="about-contact">
+                    <div class="about">
+                        <img class="about-img" src="https://img.freepik.com/free-photo/aerial-view-kelingking-beach-nusa-penida-island-bali-indonesia_335224-309.jpg?w=996&t=st=1678022761~exp=1678023361~hmac=b220a7a0a9d1cda24493ce499717396030db7ac1ed5367dad9263f423777da85" alt="">
+                        <img class="about-img" src="https://img.freepik.com/free-photo/full-shot-travel-concept-with-landmarks_23-2149153258.jpg?3">
+                        <img class="about-img" src="https://img.freepik.com/free-vector/hand-drawn-travel-agency-landing-page-with-leaves_23-2149362127.jpg?size=626&ext=jpg&ga=GA1.1.658701395.1678022736&semt=sph">
+                        <img class="about-img" src="https://img.freepik.com/free-photo/flat-lay-yellow-luggage-with-copy-space_23-2148786124.jpg?size=626&ext=jpg&ga=GA1.1.658701395.1678022736&semt=sph">
+
+                        <!--Next and Previous-->
+                        <a class="nextprev" onclick="plusDivs(-1)"></a>
+                        <a class="nextprev" onclick="plusDivs(1)"></a>
+
+                        <script>
+                            var slideIndex=1;
+                            showDivs(slideIndex);
+                            function plusDivs(n){
+                                showDivs((slideIndex+=n));
+                            }
+                            function showDivs(n){
+                                var i;
+                                var imgList = document.getElementsByClassName("about-img");     
+                                if (n > imgList.length) slideIndex = 1;
+                                else if (n<1) slideIndex=imgList.length;
+                                for (i = 0; i < imgList.length; i++){
+                                    imgList[i].style.display="none";
+                                }
+                                imgList[slideIndex - 1].style.display = "block";
+                            }
+                            setInterval(() => {
+                                plusDivs(1);
+                            }, 3000);
+                        </script>
+                        <div class="about-content">
+                            <div class="content-caption">
+                                <p><i>Liburan menjadi menyenangkan bersama Travel Agentku.</i></p>
+                            </div>
+                            <div class="content-person">
+                                <img src="http://placekitten.com/50/50" alt="">
+                                <div class="person-info">
+                                    <h6>Pravita Pearce</h6>
+                                    <p>Ibu Rumah Tangga, 33</p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="border"/>
+                        <div class="about-information">
+                            <h6 class="information-title">Here we share news about the travel industry and life-hacks for professionals. Follow us, read us and enjoy!</h6>
+                            <ul class="information-list">
+                                <li>
+                                    <div class="list-number">1</div>
+                                    <p class="list-paragraf">Travel Agent : Isekai Wibu menjadi Finalist di Travel Gossip Awards</p>
+                                </li>
+                                <li>
+                                    <div class="list-number">2</div>
+                                    <p class="list-paragraf">New! Travel ke Nusa Penida, Bali, tinggal cus besama Travel Agent : Isekai Wibu</p>
+                                </li>
+                                <li>
+                                    <div class="list-number">3</div>
+                                    <p class="list-paragraf">Travel Agent : Isekai Wibu ikut serta dalam meramaikan acara ASIA GO 2023</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <div class="card">
+                            <div class="card-title">
+                                <h4>Contact Us</h4>
+                                <p>Sales akan menghubungi anda 1x24 jam setelah data kami terima</p>
+                            </div>
+                            <form action="" name="message-form" onsubmit="return validateForm()">
+                                <div class="input">
+                                <label for="name">Your Name</label>
+                                <input type="text" name="name">
+                                </div>
+                               <div class="input">
+                                <label for="email">Email Address</label>
+                                <input type="text" name="email">
+                               </div>
+                               <div class="input">
+                                <label for="interest">What are you interested in?</label>
+                                <select name="interest" id="">
+                                    <option value="Asia">Asia</option>
+                                    <option value="Europe">Europe</option>
+                                    <option value="Local">Local</option>
+                                </select>
+                               </div>
+                                <input type="submit" value="Send">
+
+                                <script>
+                                    function validateForm(){
+                                        var name = document.forms["message-form"]["name"].value;
+                                        var email = document.forms["message-form"]["email"].value;
+                                        var interest = document.forms["message-form"]["interest"].value;
+                                        if(name =="" || email =="" || interest == ""){
+                                            alert("Input tidak boleh kosong!");
+                                            return false
+                                        }
+                                    }
+                                </script>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="package">
+            <div class="container">
+                <div class="package-title">
+                    <h1>Our Package</h1>
+                </div>
+                <div class="container-package">
+                    <div class="package-information">
+                        <img class="img-package" src="https://png.pngtree.com/png-vector/20220726/ourmid/pngtree-pura-dan-candi-bentar-balinese-traditional-gate-with-tample-silhouette-png-image_6052599.png" alt="">
+                            <h6>Bali</h6>
+                            <p>Travel dan Wisata di Bali.</p>
+                            <p>Kunjungi taman wisata dan cagar alam</p>
+                    </div>
+                    <div class="package-information">
+                        <img class="img-package" src="https://png.pngtree.com/png-vector/20211011/ourmid/pngtree-logo-jogja-png-image_3978549.png" alt="">
+                            <h6>Yogyakarta</h6>
+                            <p>Visit Yogyakarta</p>
+                            <p>Kunjungi wisata candi-candi di Yogyakarta</p>
+                    </div>
+                    <div class="package-information">
+                        <img class="img-package" src="https://static.vecteezy.com/system/resources/thumbnails/007/060/814/small/gedung-sate-flat-style-illustration-the-icon-of-bandung-west-java-indonesia-free-vector.jpg" alt="">
+                        <h6>Bandung</h6>
+                        <p>Kunjungi museum dan Gedung Sate yang menjadi bangunan bersejarah di Bandung!</p>
+                    </div>
+                    <div class="package-information">
+                        <img class="img-package" src="https://img.freepik.com/premium-vector/malang-city-vector-illustration_180868-2336.jpg?w=2000" alt="">
+                        <h6>Malang</h6>
+                        <p>Mendaki ke pegunungan yang populer di Malang!</p>
+                    </div>
+                    <div class="package-information">
+                        <img class="img-package" src="https://www.shutterstock.com/image-vector/cityscape-background-batam-indonesia-260nw-1031435413.jpg" alt="">
+                        <h6>Batam</h6>
+                        <p>Kunjungi Jembatan Barelang yang menghubungkan pulau-pulau</p>
+                    </div>
+                    <div class="package-information">
+                        <img class="img-package" src="https://cdn.pixabay.com/photo/2017/01/31/17/13/indonesia-2025660_960_720.png" alt="">
+                        <h6>Medan</h6>
+                        <p>Bangunan bangunan tua landmark di Medan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="call-us">
+            <div class="container">
+                <div class="call-us">
+                    <h1>Contact Us</h1>
+                    <p>Whether there is planning a family vacation, booking for business, or organizing the trip of a lifetime, Travel Agent | Wibu unlock the best possibilities for each individual traveler and each type of trip.</p>
+                    <h6>+62-09877772</h6>
+                    <h6>cs@isekaiwibu.com</h6>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2> RevoU</h2>
+        <h4>Travel Agent | Isekai Wibu </h4>
+        <p>2023</p>
+    </footer>
+</body>
+    
+</body>
+</html>
